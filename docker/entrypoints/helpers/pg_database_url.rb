@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 require 'uri'
 
+ENV.each do |key, value|
+  puts "env #{key}: #{value}"
+end
+
 # Let DATABASE_URL env take presedence over individual connection params.
 if !ENV['DATABASE_URL'].nil? && ENV['DATABASE_URL'] != ''
   uri = URI(ENV.fetch('DATABASE_URL', nil))
