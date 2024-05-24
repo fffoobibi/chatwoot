@@ -41,7 +41,7 @@ services:
       - ./data/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=chatwoot_production
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=postgress
       # Please provide your own password.
       - POSTGRES_PASSWORD=fgfazfgafggzxxx
 
