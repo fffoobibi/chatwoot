@@ -53,4 +53,4 @@ services:
     volumes:
       - ./data/redis:/data
     ports:
-      - '127.0.0.1:6379:6379'
+      - '127.0.0.1:8992:6379'
