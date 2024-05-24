@@ -1,6 +1,7 @@
 class ChatGpt
   def self.base_uri
-    'https://api.openai.com'
+    "#{ENV.fetch('OPENAI_BASE', 'https://api.openai.com')}"
+    # 'https://api.openai.com'
   end
 
   def initialize(context_sections = '')
