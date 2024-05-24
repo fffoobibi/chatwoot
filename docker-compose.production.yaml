@@ -13,7 +13,7 @@ services:
       - postgres
       - redis
     ports:
-      - '127.0.0.1:5009:3000'
+      - '5009:3000'
     environment:
       - NODE_ENV=production
       - RAILS_ENV=production
@@ -36,14 +36,14 @@ services:
     image: postgres:12
     restart: always
     ports:
-      - '127.0.0.1:8991:5432'
+      - '8991:5432'
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=chatwoot
       - POSTGRES_USER=postgres
       # Please provide your own password.
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=jbiaozllzlzoi111!!
 
   redis:
     image: redis:alpine
@@ -53,4 +53,4 @@ services:
     volumes:
       - ./data/redis:/data
     ports:
-      - '127.0.0.1:8992:6379'
+      - '8992:6379'
